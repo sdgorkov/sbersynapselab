@@ -113,7 +113,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: getfilms
+  name: getbooks
   labels:
     k8s-app: stub
 spec:
