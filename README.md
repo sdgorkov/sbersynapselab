@@ -118,8 +118,8 @@ metadata:
     k8s-app: stub
 spec:
   ports:
-    - name: tcp-12221-12221-wppg4
-      protocol: TCP
+    - name: http-12221-12221-wppg4
+      protocol: HTTP
       port: 12221
       targetPort: 12221
   selector:
@@ -134,8 +134,8 @@ metadata:
     k8s-app: stub
 spec:
   ports:
-    - name: tcp-12222-12222-wppg4
-      protocol: TCP
+    - name: http-12222-12222-wppg4
+      protocol: HTTP
       port: 12222
       targetPort: 12222
   selector:
@@ -150,8 +150,8 @@ metadata:
     k8s-app: stub
 spec:
   ports:
-    - name: tcp-12223-12223-wppg4
-      protocol: TCP
+    - name: http-12223-12223-wppg4
+      protocol: HTTP
       port: 12223
       targetPort: 12223
   selector:
@@ -166,8 +166,8 @@ metadata:
     k8s-app: stub
 spec:
   ports:
-    - name: tcp-12224-12224-wppg4
-      protocol: TCP
+    - name: http-12224-12224-wppg4
+      protocol: HTTP
       port: 12224
       targetPort: 12224
   selector:
@@ -198,8 +198,8 @@ metadata:
     k8s-app: wtdservice
 spec:
   ports:
-    - name: tcp-12220-12220-wppg4
-      protocol: TCP
+    - name: http-12220-12220-wppg4
+      protocol: HTTP
       port: 12220
       targetPort: 12220
   selector:
