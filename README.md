@@ -47,7 +47,7 @@
 #### Если нужно воспроизвести в своем проекте то:
 
   1. Создаем Deployment сложного сервиса через ресурсы Kubernates:
-  
+```
 kind: Deployment
 apiVersion: apps/v1
 metadata:
@@ -75,7 +75,9 @@ spec:
           imagePullPolicy: IfNotPresent
           securityContext:
             privileged: false
+```
 2. Затем приложения "заглушки"
+```
 kind: Deployment
 apiVersion: apps/v1
 metadata:
@@ -103,9 +105,11 @@ spec:
           imagePullPolicy: IfNotPresent
           securityContext:
             privileged: false
+```
 
 3. Создасть список сервисов которые вызывает сложный сервис:
 
+```
 kind: Service
 apiVersion: v1
 metadata:
@@ -120,7 +124,8 @@ spec:
       targetPort: 12221
   selector:
     k8s-app: stub
-    
+```
+```
 kind: Service
 apiVersion: v1
 metadata:
@@ -135,7 +140,8 @@ spec:
       targetPort: 12222
   selector:
     k8s-app: stub
-
+```
+```
 kind: Service
 apiVersion: v1
 metadata:
@@ -150,7 +156,8 @@ spec:
       targetPort: 12223
   selector:
     k8s-app: stub
-
+```
+```
 kind: Service
 apiVersion: v1
 metadata:
@@ -165,6 +172,7 @@ spec:
       targetPort: 12224
   selector:
     k8s-app: stub
+ ```
     
     
 4. Можно проверить вызов сервиса зайдя в терминал пода wtdservice, и выполнив там curl 0.0.0.0:12220
