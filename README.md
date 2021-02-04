@@ -178,28 +178,30 @@ spec:
  Long Serial, Fun Serial
  Doom Game, Skyrim Game
 
-5. Осталось два дела: вызвать это через внешний интерфейс:
+5. Осталось два дела: вызвать это через внешний интерфейс и внутренний интерфейсы:
 
-kind: Service
+Создаем внутрению ссылку:
+  
+  kind: Service
 apiVersion: v1
 metadata:
-  name: wtdservice-lb
-  namespace: lab-ns-sergey-gorkov
+  name: wtdservice
   labels:
-    app: wtdservice
-    name: wtdservice-lb
-  finalizers:
-    - service.kubernetes.io/load-balancer-cleanup
+    k8s-app: wtdservice
 spec:
   ports:
-    - name: cce-service-0
+    - name: tcp-12220-12220-wppg4
       protocol: TCP
       port: 12220
       targetPort: 12220
   selector:
     k8s-app: wtdservice
-  type: LoadBalancer
-  externalTrafficPolicy: Cluster
+status:
+  loadBalancer: {}
+
+Теперь, по идее на нее идет трафик из ingress а на ингресс можно попасть из-за пределов кластера. Для этого можно  с помощью curl вызвать сервис
+curl -v http://37.18.121.127:33333
+  
 6. Посмотреть всю цепочку вызовов трейсинге
 7. Посмотреть граф вызовов в Kiali
 
