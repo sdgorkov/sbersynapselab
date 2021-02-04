@@ -119,7 +119,7 @@ metadata:
 spec:
   ports:
     - name: http-12221-12221-wppg4
-      protocol: HTTP
+      protocol: TCP
       port: 12221
       targetPort: 12221
   selector:
@@ -135,7 +135,7 @@ metadata:
 spec:
   ports:
     - name: http-12222-12222-wppg4
-      protocol: HTTP
+      protocol: TCP
       port: 12222
       targetPort: 12222
   selector:
@@ -151,7 +151,7 @@ metadata:
 spec:
   ports:
     - name: http-12223-12223-wppg4
-      protocol: HTTP
+      protocol: TCP
       port: 12223
       targetPort: 12223
   selector:
@@ -167,7 +167,7 @@ metadata:
 spec:
   ports:
     - name: http-12224-12224-wppg4
-      protocol: HTTP
+      protocol: TCP
       port: 12224
       targetPort: 12224
   selector:
@@ -199,7 +199,7 @@ metadata:
 spec:
   ports:
     - name: http-12220-12220-wppg4
-      protocol: HTTP
+      protocol: TCP
       port: 12220
       targetPort: 12220
   selector:
