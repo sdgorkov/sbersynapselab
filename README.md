@@ -181,8 +181,8 @@ spec:
 5. Осталось два дела: вызвать это через внешний интерфейс и внутренний интерфейсы:
 
 Создаем внутрению ссылку:
-  
-  kind: Service
+```  
+kind: Service
 apiVersion: v1
 metadata:
   name: wtdservice
@@ -196,8 +196,7 @@ spec:
       targetPort: 12220
   selector:
     k8s-app: wtdservice
-status:
-  loadBalancer: {}
+ ```
 
 Теперь, по идее на нее идет трафик из ingress а на ингресс можно попасть из-за пределов кластера. Для этого можно  с помощью curl вызвать сервис
 curl -v http://37.18.121.127:33333
