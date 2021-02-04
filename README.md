@@ -98,7 +98,7 @@ spec:
     spec:
       containers:
         - name: stub
-          image: 'swr.ru-moscow-1.hc.sbercloud.ru/sber/stub:0.8'
+          image: 'swr.ru-moscow-1.hc.sbercloud.ru/sber/fstub:0.8'
           resources: {}
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
